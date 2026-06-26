@@ -1,6 +1,5 @@
 import React from "react";
-// @ts-ignore: allow importing CSS without type declarations
-import "../css/index.css";
+
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { RippleBadge } from "./MaterialTheme/styled";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
@@ -12,6 +11,10 @@ import { OrdersPage } from "./screens/ordersPage";
 import { HomeNavbar } from "./components/headers/HomeNavbar";
 import { OtherNavbar } from "./components/headers/OtherNavbar";
 import { Footer } from "./components/footer";
+// @ts-ignore: allow importing CSS without type declarations
+import "../css/index.css";
+// @ts-ignore
+import "../css/navbar.css";
 
 function App() {
   const location = useLocation();
