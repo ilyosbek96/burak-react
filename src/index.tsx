@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client"; // <-- react-dom/client dan import qilinadi
+import { createRoot } from "react-dom/client"; // <-- react-dom/client dan import qilinadi
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./app/App";
@@ -11,7 +11,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 // @ts-ignore: allow importing CSS files without type declarations
 import "./css/index.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root")!);
+const container = document.getElementById("root")!;
+const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
