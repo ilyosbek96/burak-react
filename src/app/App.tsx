@@ -15,6 +15,7 @@ import { Footer } from "./components/footer";
 import "../css/index.css";
 // @ts-ignore
 import "../css/navbar.css";
+import { HelpPage } from "./screens/helpPage";
 
 function App() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/orders" element={<OrdersPage />} />
         <Route path="/member-page" element={<UserPage />} />
+        <Route path="/help" element={<HelpPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
       <Footer />
