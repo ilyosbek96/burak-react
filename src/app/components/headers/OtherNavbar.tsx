@@ -10,7 +10,11 @@ export default function OtherNavbar() {
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg" alt="logo" />
+              <img
+                className="brand-logo"
+                src="/icons/burak.svg"
+                alt="rasm bor"
+              />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -18,50 +22,43 @@ export default function OtherNavbar() {
               <NavLink to="/">Home</NavLink>
             </Box>
             <Box className={"hover-line"}>
-              <NavLink
-                to="/products"
-                className={({ isActive }) => (isActive ? "underline" : "")}
-              >
-                Products
+              <NavLink to="/products" activeClassName={"underline"}>
+                {" "}
+                Products{" "}
               </NavLink>
             </Box>
             {authMember ? (
               <Box className={"hover-line"}>
-                <NavLink
-                  to="/orders"
-                  className={({ isActive }) => (isActive ? "underline" : "")}
-                >
-                  Orders
-                </NavLink>
+                <NavLink to="/orders"> Orders </NavLink>
               </Box>
             ) : null}
             {authMember ? (
               <Box className={"hover-line"}>
-                <NavLink
-                  to="/member-page"
-                  className={({ isActive }) => (isActive ? "underline" : "")}
-                >
-                  My Page
+                <NavLink to="/member-page" activeClassName={"underline"}>
+                  {" "}
+                  My Page{" "}
                 </NavLink>
               </Box>
             ) : null}
             <Box className={"hover-line"}>
-              <NavLink to="/help">help</NavLink>
+              <NavLink to="/help" activeClassName={"underline"}>
+                {" "}
+                Help{" "}
+              </NavLink>
             </Box>
-            {/* BASKET */}
+            {/* Basket.txs fileni chaqirdik */}
             <Basket />
-
             {!authMember ? (
               <Box>
-                <Button variant="contained" className="login-buttton">
+                <Button variant="contained" className="login-button">
                   Login
                 </Button>
               </Box>
             ) : (
               <img
                 className="user-avatar"
-                src={"/icons/default-user.svg"}
-                aria-haspopup={true}
+                src="/icons/default-user.svg"
+                aria-haspopup={"true"}
               />
             )}
           </Stack>
