@@ -1,45 +1,43 @@
-/* =============================== home-navbar ===============================*/
-
 .home-navbar {
-  display: flex;
   width: 100%;
   height: 773px;
+  display: flex;
   background: url("/public/img/banner.webp");
   background-size: cover;
 }
 
 .home-navbar .navbar-container {
-  height: 642px;
   margin-top: 55px;
+  height: 642px;
 }
 
 .home-navbar .navbar-container .menu {
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
 }
 
 .home-navbar .navbar-container .menu .brand-logo {
-  width: 125px;
-  height: 30px;
+  width: 180px;
+  height: 40px;
 }
 
 .home-navbar .navbar-container .menu .links {
+  min-width: 700px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-width: 700px;
 }
 
-.home-navbar .navbar-container .menu .links .login-buttton {
-  color: #f8f8ff;
+.home-navbar .navbar-container .menu .links .login-button {
   background: #3776cc;
+  color: #f8f8ff;
 }
 
-.home-navbar .navbar-container .menu .links .user-avatar {
+.home-navbar .navbar-container .menu .user-avatar {
   width: 50px;
   height: 50px;
   border-radius: 24px;
@@ -50,22 +48,22 @@
 }
 
 .home-navbar .hover-line a {
-  z-index: 100;
   color: #f8f8ff;
+  z-index: 100;
 }
 
 .home-navbar .underline {
-  content: "";
   display: block;
+  content: "";
   border-bottom: solid 2px #d7b686;
 }
 
 .home-navbar .hover-line:after {
-  content: "";
   display: block;
+  content: "";
   border-bottom: solid 2px #d7b686;
+  transform: scaleX(0);
   transition: transform 250ms ease-in-out;
-  transform: scale(0);
 }
 
 .home-navbar .hover-line:hover:after {
@@ -77,17 +75,17 @@
 }
 
 .home-navbar .navbar-container .header-frame {
+  margin-top: 142px;
+  height: 462px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 462px;
-  margin-top: 142px;
 }
 
 .home-navbar .navbar-container .header-frame .detail {
+  width: 510px;
   display: flex;
   flex-direction: column;
-  width: 510px;
 }
 
 .home-navbar .navbar-container .header-frame .detail .head-main-txt {
@@ -95,10 +93,10 @@
   height: 150px;
   font-family: "Roboto Serif";
   font-size: 50px;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   line-height: normal;
-  letter-spacing: -00.75px;
+  letter-spacing: -0.75px;
   color: #f8f8ff;
 }
 
@@ -107,21 +105,21 @@
   height: 42px;
   font-family: "Roboto Serif";
   font-size: 36px;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: -0.54px;
   color: #d7b686;
 }
 
 .home-navbar .navbar-container .header-frame .detail .service-txt {
+  margin-top: 23px;
   width: 153px;
   height: 23px;
-  margin-top: 23px;
   font-family: "Roboto Serif";
   font-size: 20px;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: -0.3px;
   color: #d5d5d5;
@@ -135,37 +133,35 @@
   width: 210px;
   height: 60px;
   border-radius: 4px;
+  background: #1976d2;
+  text-align: center;
   font-family: Poppins;
   font-size: 17px;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   line-height: normal;
-  text-align: center;
   color: #f8f8ff;
-  background: #1976d2;
 }
 
 .home-navbar .navbar-container .logo-frame {
+  margin-top: 43px;
   width: 690px;
   height: 419px;
-  margin-top: 43px;
 }
 
 .home-navbar .navbar-container .logo-frame .logo-img {
   width: 100%;
   height: 100%;
-  background: url("/public/img/logo.webp");
+  background: url("/public/img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
-  filter: invert(10%);
+  filter: invert(25%);
 }
 
-/* =============================== other-navbar ===============================*/
-
 .other-navbar {
-  display: flex;
   width: 100%;
   height: 400px;
+  display: flex;
   background: url("/public/img/banner.webp");
   background-size: cover;
 }
@@ -175,32 +171,32 @@
 }
 
 .other-navbar .navbar-container .menu {
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
 }
 
 .other-navbar .navbar-container .menu .brand-logo {
-  width: 125px;
-  height: 30px;
+  width: 180px;
+  height: 40px;
 }
 
 .other-navbar .navbar-container .menu .links {
+  min-width: 700px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-width: 700px;
 }
 
-.other-navbar .navbar-container .menu .links .login-buttton {
-  color: #f8f8ff;
+.other-navbar .navbar-container .menu .links .login-button {
   background: #3776cc;
+  color: #f8f8ff;
 }
 
-.other-navbar .navbar-container .menu .links .user-avatar {
+.other-navbar .navbar-container .menu .user-avatar {
   width: 50px;
   height: 50px;
   border-radius: 24px;
@@ -211,82 +207,82 @@
 }
 
 .other-navbar .hover-line a {
-  z-index: 100;
   color: #f8f8ff;
+  z-index: 100;
 }
 
 .other-navbar .underline {
-  content: "";
   display: block;
+  content: "";
   border-bottom: solid 2px #d7b686;
 }
 
 .other-navbar .hover-line:after {
-  content: "";
   display: block;
+  content: "";
   border-bottom: solid 2px #d7b686;
+  transform: scaleX(0);
   transition: transform 250ms ease-in-out;
-  transform: scale(0);
 }
 
 .other-navbar .hover-line:hover:after {
   transform: scaleX(1);
 }
 
-.other-navba div.hover-line:after {
+.other-navbar div.hover-line:after {
   transform-origin: 0% 50%;
 }
 
-/* ================================= BASKET ==================== */
+/* BASKET */
 
 .basket-frame {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  padding: 10px 4px 0px 4px;
   width: 450px;
   height: auto;
-  padding: 10px 4px 0px 4px;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
   background: #f8f8ff;
+  border-radius: 16px;
 }
 
 .basket-frame .all-check-box {
+  padding: 0px 6px;
+  width: 100%;
+  height: 35px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  height: 35px;
-  padding: 0px 6px;
+  background: #d7b586;
   border-width: 1px 0px;
   border-style: solid;
   border-color: #343434;
-  background: #d7b586;
 }
 
 .basket-frame .basket-info-box {
   position: relative;
+  margin-top: 6px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  height: auto;
-  margin-top: 6px;
 }
 
 .basket-info-box .product-img {
   width: 60px;
   height: 60px;
-  border-radius: 29px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 29px;
 }
 
 .basket-info-box .product-name {
-  width: 185px;
   margin-left: 11px;
+  width: 185px;
   font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 30px;
   color: #000000;
 }
@@ -294,9 +290,9 @@
 .basket-info-box .product-price {
   width: 80px;
   font-family: "Poppins";
-  font-size: 15px;
-  font-weight: 600;
   font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
   line-height: 22px;
   color: #ae0000;
 }
@@ -318,35 +314,35 @@
 }
 
 .basket-frame .basket-order {
+  margin-top: 10px;
+  width: 100%;
+  height: 64px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  height: 64px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
-  margin-top: 10px;
 }
 
 .basket-order .price {
-  display: flex;
   width: 200px;
+  display: flex;
   font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 30px;
   color: #000000;
 }
 
 .basket-frame .orders-wrapper {
   position: relative;
-  display: flex;
   overflow: hidden;
-  overflow-y: scroll;
-  flex-direction: column;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 .basket-frame .orders-wrapper::-webkit-scrollbar {
@@ -354,8 +350,8 @@
 }
 
 .basket-frame .orders-wrapper::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background-color: #888;
+  border-radius: 5px;
 }
 
 .basket-frame .orders-wrapper::-webkit-scrollbar-track {
@@ -364,10 +360,10 @@
 
 .basket-frame .orders-main-wrapper {
   position: relative;
-  display: flex;
   overflow: hidden;
-  flex-direction: column;
+  margin-top: 10px;
   width: 100%;
   height: 260px;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }

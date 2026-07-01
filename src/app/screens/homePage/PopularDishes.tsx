@@ -1,14 +1,13 @@
 import React from "react";
 import { Box, Container, Stack } from "@mui/material";
-import { CssVarsProvider } from "@mui/joy/styles";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
-import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
+import { CssVarsProvider } from "@mui/joy/styles";
+import CardOverflow from "@mui/joy/CardOverflow";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import { CardOverflow } from "@mui/joy";
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 
 const list = [
   { productName: "Lavash", imagePath: "/img/lavash.webp" },
@@ -19,7 +18,7 @@ const list = [
 
 export default function PopularDishes() {
   return (
-    <div className="popuar-dishes-frame">
+    <div className="popular-dishes-frame">
       <Container>
         <Stack className="popular-section">
           <Box className="category-title">Popular Dishes</Box>
@@ -37,12 +36,20 @@ export default function PopularDishes() {
                         <Stack
                           flexDirection={"row"}
                           justifyContent={"space-between"}
+                          sx={{ width: "260px" }}
                         >
                           <Typography
                             level="h2"
                             fontSize="lg"
                             textColor="#fff"
                             mb={1}
+                            sx={{
+                              display: "block",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                            }}
+                            noWrap
                           >
                             {ele.productName}
                           </Typography>
@@ -54,7 +61,7 @@ export default function PopularDishes() {
                               display: "flex",
                             }}
                           >
-                            20{" "}
+                            20
                             <VisibilityIcon
                               sx={{ fontSize: 25, marginLeft: "5px" }}
                             />
@@ -69,11 +76,19 @@ export default function PopularDishes() {
                           px: "var(--Card-padding)",
                           borderTop: "1px solid",
                           height: "60px",
+                          width: "290px",
                         }}
                       >
                         <Typography
                           startDecorator={<DescriptionOutlinedIcon />}
                           textColor="neutral.300"
+                          sx={{
+                            display: "block",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                          }}
+                          noWrap
                         >
                           This is delicious meal
                         </Typography>
@@ -83,7 +98,7 @@ export default function PopularDishes() {
                 );
               })
             ) : (
-              <Box className="no-data">Popular dishes are not available!</Box>
+              <Box className="no-data">Popular products are not available!</Box>
             )}
           </Stack>
         </Stack>

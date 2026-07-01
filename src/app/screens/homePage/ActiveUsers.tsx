@@ -1,21 +1,19 @@
-import React from "react";
 import { Box, Container, Stack } from "@mui/material";
-import { Card, CardOverflow, CssVarsProvider } from "@mui/joy";
+import Card from "@mui/joy/Card";
+import { CssVarsProvider, Typography } from "@mui/joy";
+import CardOverflow from "@mui/joy/CardOverflow";
 import AspectRatio from "@mui/joy/AspectRatio";
-import Typography from "@mui/joy/Typography";
-
-import VisibilityIcon from "@mui/icons-material/Visibility";
 
 const activeUsers = [
   { memberNick: "Martin", memberImage: "/img/martin.webp" },
   { memberNick: "Justin", memberImage: "/img/justin.webp" },
   { memberNick: "Rose", memberImage: "/img/rose.webp" },
-  { memberNick: "Nurset", memberImage: "/img/nusRet.webp" },
+  { memberNick: "Nusret", memberImage: "/img/nusret.webp" },
 ];
 
 export default function ActiveUsers() {
   return (
-    <div className={"active-user-frame"}>
+    <div className={"active-users-frame"}>
       <Container>
         <Stack className={"main"}>
           <Box className={"category-title"}>Active Users</Box>
@@ -30,17 +28,16 @@ export default function ActiveUsers() {
                           <img src={ele.memberImage} alt="" />
                         </AspectRatio>
                       </CardOverflow>
-
-                      <Stack flexDirection={"row"} className="member-nickname">
-                        <Typography className={"title"}>
+                      <CardOverflow>
+                        <Typography className={"member-nickname"}>
                           {ele.memberNick}
                         </Typography>
-                      </Stack>
+                      </CardOverflow>
                     </Card>
                   );
                 })
               ) : (
-                <Box className="no-data">No Active Users</Box>
+                <Box className="no-data">No Active Users!</Box>
               )}
             </CssVarsProvider>
           </Stack>

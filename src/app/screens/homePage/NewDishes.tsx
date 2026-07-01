@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Container, Stack } from "@mui/material";
 import AspectRatio from "@mui/joy/AspectRatio";
+import Card from "@mui/joy/Card";
+import CardOverflow from "@mui/joy/CardOverflow";
+import Typography from "@mui/joy/Typography";
 import { CssVarsProvider } from "@mui/joy/styles";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import CardOverflow from "@mui/joy/CardOverflow";
 import Divider from "../../components/divider";
-import Typography from "@mui/joy/Typography";
-import Card from "@mui/joy/Card";
 
 const newDishes = [
   { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
@@ -16,6 +16,8 @@ const newDishes = [
 ];
 
 export default function NewDishes() {
+  console.log("newDishes:", newDishes);
+
   return (
     <div className={"new-products-frame"}>
       <Container>
@@ -37,10 +39,20 @@ export default function NewDishes() {
                       <CardOverflow variant="soft" className="product-detail">
                         <Stack className="info">
                           <Stack flexDirection={"row"}>
-                            <Typography className={"title"}>
+                            <Typography
+                              className={"title"}
+                              sx={{
+                                display: "block",
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                marginRight: "10px",
+                              }}
+                              noWrap
+                            >
                               {ele.productName}
                             </Typography>
-                            <Divider width="2" height="24px" bg="#d9d9d9" />
+                            <Divider width="2" height="24" bg="#d9d9d9" />
                             <Typography className={"price"}>$12</Typography>
                           </Stack>
                           <Stack>

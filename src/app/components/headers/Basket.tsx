@@ -15,6 +15,7 @@ export default function Basket() {
   const open = Boolean(anchorEl);
 
   /** HANDLERS **/
+
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(e.currentTarget);
   };
@@ -42,7 +43,6 @@ export default function Basket() {
         open={open}
         onClose={handleClose}
         // onClick={handleClose}
-        // @ts-ignore: allow custom PaperProps on Menu (typing mismatch)
         PaperProps={{
           elevation: 0,
           sx: {
