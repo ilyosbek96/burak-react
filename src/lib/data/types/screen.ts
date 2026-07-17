@@ -2,14 +2,14 @@ import { Member } from "./member";
 import { Product } from "./product";
 
 /** REACT APP STATE **/
-export interface APPROOTSTATE {
+export interface AppRootState {
   homePage: HomePageState;
 }
 
 /** HOMEPAGE **/
 export interface HomePageState {
   popularDishes: Product[];
-  newDished: Product[];
+  newDishes: Product[];
   topUsers: Member[];
 }
 
