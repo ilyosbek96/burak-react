@@ -1,6 +1,6 @@
 import axios from "axios";
 import { serverApi } from "../../lib/config";
-import { Product, ProductInquiry } from "../../lib/data/types/product";
+import { Product, ProductInquiry } from "../../lib/types/product";
 
 class ProductService {
   private readonly path: string;

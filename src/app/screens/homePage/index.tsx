@@ -8,12 +8,12 @@ import Events from "./Events";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "@reduxjs/toolkit";
 import { setNewDishes, setPopularDishes, setTopUsers } from "./slice";
-import { Product } from "../../../lib/data/types/product";
+import { Product } from "../../../lib/types/product";
 import ProductService from "../../services/ProductService";
-import { ProductCollection } from "../../../lib/data/enums/product.enum";
+import { ProductCollection } from "../../../lib/enums/product.enum";
 import "../../../css/home.css";
 import MemberService from "../../services/MemberService";
-import { Member } from "../../../lib/data/types/member";
+import { Member } from "../../../lib/types/member";
 
 /** REDUX SLICE & SELECTOR **/
 const actionDispatch = (dispatch: Dispatch) => ({
