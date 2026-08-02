@@ -13,16 +13,11 @@ import { sweetErrorHandling } from "../../../lib/sweetAlert";
 import OrderService from "../../services/OrderService";
 import { useGlobals } from "../../hooks/useGlobals";
 
-interface BasketProps {
-  cartItems: CartItem[];
-  onAdd: (input: CartItem) => void;
-  onRemove: (input: CartItem) => void;
-  onDelete: (input: CartItem) => void;
-  onDeleteAll: () => void;
-}
+interface BasketProps {}
 
 export default function Basket(props: BasketProps) {
-  const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = props;
+  const { BASKET } = useGlobals();
+  const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = BASKET;
   const { authMember, setOrderBuilder } = useGlobals();
   const history = useHistory();
   const itemsPrice: number = cartItems.reduce(

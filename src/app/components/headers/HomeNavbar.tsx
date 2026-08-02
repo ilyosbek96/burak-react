@@ -10,17 +10,10 @@ import {
 import Logout from "@mui/icons-material/Logout";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
-import React, { useState, useEffect } from "react";
-import { CartItem } from "../../../lib/types/search";
 import { useGlobals } from "../../hooks/useGlobals";
 import { serverApi } from "../../../lib/config";
 
 interface HomeNavbarProps {
-  cartItems: CartItem[];
-  onAdd: (input: CartItem) => void;
-  onRemove: (input: CartItem) => void;
-  onDelete: (input: CartItem) => void;
-  onDeleteAll: () => void;
   setSignupOpen: (isOpen: boolean) => void;
   setLoginOpen: (isOpen: boolean) => void;
   hanleLogoutClick: (e: React.MouseEvent<HTMLElement>) => void;
@@ -31,11 +24,6 @@ interface HomeNavbarProps {
 
 export default function HomeNavbar(props: HomeNavbarProps) {
   const {
-    cartItems,
-    onAdd,
-    onRemove,
-    onDelete,
-    onDeleteAll,
     setSignupOpen,
     setLoginOpen,
     hanleLogoutClick,
@@ -86,13 +74,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                 Help
               </NavLink>
             </Box>
-            <Basket
-              cartItems={cartItems}
-              onAdd={onAdd}
-              onRemove={onRemove}
-              onDelete={onDelete}
-              onDeleteAll={onDeleteAll}
-            />
+            <Basket />
             {!authMember ? (
               <Box>
                 <Button

@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from "react";
 import Cookies from "universal-cookie";
 import { Member } from "../../lib/types/member";
 import { GlobalContext } from "../hooks/useGlobals";
+import useBasket from "../hooks/useBasket";
 
 const ContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const cookies = new Cookies();
@@ -17,7 +18,13 @@ const ContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   return (
     <GlobalContext.Provider
-      value={{ authMember, setAuthMember, orderBuilder, setOrderBuilder }}
+      value={{
+        authMember,
+        setAuthMember,
+        orderBuilder,
+        setOrderBuilder,
+        BASKET: useBasket(),
+      }}
     >
       {children}
     </GlobalContext.Provider>
